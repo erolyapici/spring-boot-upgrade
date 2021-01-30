@@ -1,0 +1,19 @@
+server:
+  servlet-path: /application-name
+spring:
+  application:
+    name: application-name
+  profiles:
+    active: test
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+      enabled: true
+      config:
+        prefix: config
+        default-context: application
+        profile-separator: _
+        watch:
+          enabled: false
+        fail-fast: true
